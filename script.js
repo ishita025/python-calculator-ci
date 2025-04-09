@@ -1,14 +1,17 @@
-function appendToResult(value) {
-    document.getElementById('result').value += value;
+function appendValue(value) {
+    document.getElementById('display').value += value;
   }
-  function clearResult() {
-    document.getElementById('result').value = '';
+  
+  function clearDisplay() {
+    document.getElementById('display').value = '';
   }
+  
   function calculate() {
     try {
-      document.getElementById('result').value = eval(document.getElementById('result').value);
-    } catch {
-      document.getElementById('result').value = 'Error';
+      const result = eval(document.getElementById('display').value);
+      document.getElementById('display').value = result;
+    } catch (error) {
+      document.getElementById('display').value = 'Error';
     }
   }
   
