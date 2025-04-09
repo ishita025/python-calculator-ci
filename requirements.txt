@@ -1,4 +1,0 @@
-flask
-pytest
-requests
-# remove nginx — not a pip package
